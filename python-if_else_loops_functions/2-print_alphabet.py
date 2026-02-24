@@ -1,2 +1,7 @@
 #!/usr/bin/python3
-print("".join("%c" % i for i in range(97, 123)), end="")
+i = 97
+str = ''
+while i < 123:
+    str = str + chr(i) + ''
+    i = i + 1
+print("{}".format(str), end='')

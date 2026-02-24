@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("".join(c for c in map(chr, range(97,123)) if c not in "eq"), end="")
+i = 97; str = ''; 
+while i < 123: str += chr(i); i += 1
+str = str.replace('e','').replace('q',''); print("{}".format(str), end='')

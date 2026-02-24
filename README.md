@@ -1,1 +1,1 @@
-salam
+loop/ifelse functions

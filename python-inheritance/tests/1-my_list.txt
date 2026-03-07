@@ -1,0 +1,16 @@
+>>> MyList=__import__(1-my_list).MyList
+>>> my_list=MyList()
+>>> my_list.extend([10,201,12,361])
+>>> my_list.print_sorted()
+[10, 12, 201, 361]
+>>> print(my_list)
+[10, 201, 12, 361]
+>>> my_list.append(20)
+>>> print(my_list)
+[10, 201, 12, 361, 20]
+>>> my_list.append(-20)
+>>> my_list.print_sorted()
+[-20, 10, 12, 20, 201, 361]
+>>> my_list.clear()
+>>> my_list.print_sorted()
+[]

@@ -1,6 +1,6 @@
->>> MyList=__import__(1-my_list).MyList
->>> my_list=MyList()
->>> my_list.extend([10,201,12,361])
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.extend([10, 201, 12, 361])
 >>> my_list.print_sorted()
 [10, 12, 201, 361]
 >>> print(my_list)

@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-"""the module which defines base geometry class"""
+"""Module that defines BaseGeometry class with integer validation"""
 
 
 class BaseGeometry:
     """BaseGeometry class"""
 
     def area(self):
-        """Raises an exception because area is not implemented"""
+        """Raises exception because area is not implemented"""
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name, value):
-        """Validates that value is an integer > 0"""
+    def integer_validator(self, *args):
+        """Validates value is an integer > 0
+
+        Expected arguments: (name, value)
+        """
+        if len(args) != 2:
+            raise TypeError(
+                "integer_validator() missing 2 required positional arguments: name and value"
+            )
+
+        name, value = args
+
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:

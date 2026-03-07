@@ -4,11 +4,11 @@
 
 def append_write(filename="", text=""):
 
-    """we use a and w regimes to write to file"""
+    """we use 'a' and 'w' regimes to write to file"""
 
     if filename:
-        with open(filename, a) as f:
+        with open(filename, 'a') as f:
             return f.write(text)
     else:
-        with open(filename, w) as f:
+        with open(filename, 'w') as f:
             return f.write(text)

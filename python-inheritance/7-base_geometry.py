@@ -16,7 +16,8 @@ class BaseGeometry:
         """
         if len(args) != 2:
             raise TypeError(
-                "integer_validator() missing 2 required positional arguments: name and value"
+                "integer_validator() missing 2 required positional "
+                "arguments: name and value"
             )
 
         name, value = args

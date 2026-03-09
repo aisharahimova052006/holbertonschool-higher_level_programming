@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""
-hhh
-"""
-from urllib import request
+"""get X-Request-Id header from url"""
 import sys
-if __name__ == "__main__":
-    url = sys.argv[1]
+import urllib.request
 
-    req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as response:
-        headers = response.headers
-        print(headers.get("X-Request-Id"))
+
+if __name__ == "__main__":
+    req = urllib.request.Request(sys.argv[1], headers={"cfclearance": "true"})
+    with urllib.request.urlopen(req) as r:
+        print(r.headers.get("X-Request-Id"))
